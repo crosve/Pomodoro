@@ -5,19 +5,18 @@ function Header() {
 
     const toggleMenu = () =>{
         setIsOpen(!isOpen);
+        console.log(isOpen)
 
     }
   return (
-    <header className="bg-custom-gray text-brown-500">
+    <header className="bg-custom-gray text-brown-500 absolute w-screen">
       <div className="container mx-auto flex items-center justify-between p-4">
-        {/* Logo */}
         <div className="flex items-center">
           <a href="/">
-            <img src="/src/assets/tomatoe.png" alt="Logo" className="h-20 w-auto"  />
+            <img src="/src/assets/tomatoe.png" alt="Logo" className="h-20 w-auto" />
           </a>
         </div>
 
-        {/* Menu Toggle Button (visible on small screens) */}
         <div className="block lg:hidden">
           <button 
             onClick={toggleMenu}
@@ -29,15 +28,14 @@ function Header() {
           </button>
         </div>
 
-        <nav className={`lg:flex space-x-6 ${isOpen ? 'block' : 'hidden'} lg:block rounded-2xl border-2 border-brown-500 px-14 py-4`}>
+        <nav className={`hidden lg:flex space-x-6 rounded-2xl border-2 border-brown-500 px-14 py-4`}>
           <a href="#" className="hover:text-gray-300">Login</a>
         </nav>
 
         <div className={`lg:hidden fixed inset-0 bg-brown-500 bg-opacity-80 z-20 ${isOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-center justify-center h-full space-y-4">
             <a href="#" className="text-white text-lg hover:text-gray-300">Login</a>
-            <img onClick={toggleMenu} src='/src/assets/tomatoe.png' alt='close' className='h-10 w-auto'/>
-
+            <img onClick={toggleMenu} src='/src/assets/tomatoe.png' alt='close' className='h-10 w-auto' />
           </div>
         </div>
       </div>
