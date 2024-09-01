@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +30,12 @@ function Header() {
         </div>
 
         <nav className={`hidden lg:flex space-x-6 rounded-2xl border-2 border-brown-500 px-14 py-4`}>
-          <a href="#" className="hover:text-gray-300">Login</a>
+          <a href="/login" className="hover:text-gray-300">Login</a>
         </nav>
 
         <div className={`lg:hidden fixed inset-0 bg-brown-500 bg-opacity-80 z-20 ${isOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col items-center justify-center h-full space-y-4">
-            <a href="#" className="text-white text-lg hover:text-gray-300">Login</a>
+            <a href="/login" className="text-white text-lg hover:text-gray-300">Login</a>
             <img onClick={toggleMenu} src='/src/assets/tomatoe.png' alt='close' className='h-10 w-auto' />
           </div>
         </div>

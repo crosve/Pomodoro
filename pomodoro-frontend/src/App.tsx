@@ -1,6 +1,8 @@
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LandingPage from './routes/LandingPage';
+import SignUp from "./routes/SignUp";
+import Login from "./routes/Login";
 import Header from "./components/Header";
 
 
@@ -12,6 +14,8 @@ function App() {
         <Header/>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       </div>
     </Router>
