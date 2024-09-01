@@ -44,7 +44,7 @@ function Login() {
           type="submit"
           className="w-full bg-slate-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-slate-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400"
         >
-          Sign Up
+          Login
         </button>
       </form >
       <h1 className="text-center mt-4 text-sm text-gray-600">

@@ -80,7 +80,9 @@ function SignUp() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             type='password'
+            placeholder="Reenter your password"
             className='mt-1 block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400'>
+            
         </input>
     </div>
     <button
