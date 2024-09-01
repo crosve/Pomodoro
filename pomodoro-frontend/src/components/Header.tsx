@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
+import logo from "/tomatoe.png"
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ function Header() {
       <div className="container mx-auto flex items-center justify-between p-4">
         <div className="flex items-center">
           <a href="/">
-            <img src="/public/tomatoe.png" alt="Logo" className="h-20 w-auto" />
+            <img src={logo} alt="Logo" className="h-20 w-auto" />
           </a>
         </div>
 
